@@ -14,4 +14,8 @@ class NamesTestCase(unittest.TestCase):
         """能够正确的处理Zhang Bin这样的名字么"""
         full_name = get_formatted_name.get_formatted_name("zhang", "bin")
         self.assertEqual(full_name, "Zhang Bin")
+    def test_first_middle_last_name(self):
+        """能否识别三个子的名字Li Jian Ting"""
+        full_name = get_formatted_name.get_formatted_name("li", "ting",  "jian")
+        self.assertEqual(full_name, "Li Jian Ting")
 unittest.main()
