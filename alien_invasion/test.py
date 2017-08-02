@@ -6,11 +6,6 @@
 # @File    : test.py
 # @Software: PyCharm Community Edition
 # 为了测试函数使用
-import pygame
-import bullet
-import settings
-import ship
+import alien
 
-
-test = help(pygame.sprite.Group)
-print(test)
+a_alien = alien.Alien(settings, screen)
