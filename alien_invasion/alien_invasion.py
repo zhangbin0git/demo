@@ -30,7 +30,7 @@ def run_game():
     # 创建一个用于储存外星人的编组
     aliens = pygame.sprite.Group()
     # 创建一个外星人群
-    gf.create_fleet(ai_settings, screen, aliens)
+    gf.create_fleet(ai_settings, screen, aliens, aship)
     # 开始游戏的主循环
     while True:
         # 监视键盘和鼠标的实践
@@ -39,6 +39,7 @@ def run_game():
         aship.update()
         # 调入子弹更新和删除无用的子弹，此条代码是更新bullet的数量数据
         gf.update_bullets(bullets)
+        gf.update_aliens(aliens)
         # 调入屏幕更新和飞船更新函数，每次重画面
         gf.update_screen(ai_settings, screen, aship, bullets, aliens)
 
