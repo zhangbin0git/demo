@@ -126,3 +126,23 @@ def create_alien(settings, screen, alien_number, row_number, aliens):
 def update_aliens(aliens):
     """更新所有外星人的位置"""
     aliens.update()
+
+def change_fleet_direction(settings, aliens):
+    """将外星人下移，并改变方向"""
+    # test aliens.sprites()___type
+    for alien in aliens.sprites():
+        alien.rect.y += settings.fleet_drop_speed
+    settings.fleet_direction *= -1
+
+def check_fleet_edges(aliens, settings):
+    """外星人到达边缘采取相应的措施"""
+    for alien in aliens.sprites():
+        if alien.check_edge():
+            change_fleet_direction(settings, aliens)
+            break   #test__研究break怎么用
+
+def update_aliens(aliens, settings):
+    """检查是否到达边缘，并更新外星人的位置"""
+    check_fleet_edges(aliens, settings)
+    aliens.update()
+

@@ -39,7 +39,7 @@ def run_game():
         aship.update()
         # 调入子弹更新和删除无用的子弹，此条代码是更新bullet的数量数据
         gf.update_bullets(bullets)
-        gf.update_aliens(aliens)
+        gf.update_aliens(aliens, ai_settings)
         # 调入屏幕更新和飞船更新函数，每次重画面
         gf.update_screen(ai_settings, screen, aship, bullets, aliens)
 

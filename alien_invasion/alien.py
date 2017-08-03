@@ -28,9 +28,27 @@ class Alien(pygame.sprite.Sprite):
     def blitme(self):
         """在指定位置绘制外星人"""
         self.screen.blit(self.image, self.rect)
+
     def update(self):
         """更新外星人的位置"""
         #向右移动外星人
         self.x += self.settings.alien_speed_factor
         self.rect.x = self.x
 
+    def check_edge(self):
+        """检查外星人是否在屏幕的边缘"""
+        # 如果在边缘就返回True
+        # 获取屏幕的尺寸
+        screen_rect = self.screen.get_rect()
+        # 如果外星人到达右边缘返回True
+        if self.rect.right >= screen_rect.right:
+            return True
+        # 如果外星人在左边缘，返回True
+        elif self.rect.left <= 0:
+            return True
+
+    def update(self):
+        """向左或向右移动外星人"""
+        self.x += self.settings.alien_speed_factor * \
+                  self.settings.fleet_direction
+        self.rect.x = self.x
