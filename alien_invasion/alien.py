@@ -30,9 +30,9 @@ class Alien(pygame.sprite.Sprite):
         self.screen.blit(self.image, self.rect)
 
     def update(self):
-        """更新外星人的位置"""
-        #向右移动外星人
-        self.x += self.settings.alien_speed_factor
+        """向左或向右移动外星人"""
+        self.x += self.settings.alien_speed_factor * \
+                  self.settings.fleet_direction
         self.rect.x = self.x
 
     def check_edge(self):
@@ -46,9 +46,3 @@ class Alien(pygame.sprite.Sprite):
         # 如果外星人在左边缘，返回True
         elif self.rect.left <= 0:
             return True
-
-    def update(self):
-        """向左或向右移动外星人"""
-        self.x += self.settings.alien_speed_factor * \
-                  self.settings.fleet_direction
-        self.rect.x = self.x

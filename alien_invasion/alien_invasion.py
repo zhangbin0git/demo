@@ -38,7 +38,8 @@ def run_game():
         # 检查键盘输入，调整飞船的位置,此条代码是更新ship的位置数据
         aship.update()
         # 调入子弹更新和删除无用的子弹，此条代码是更新bullet的数量数据
-        gf.update_bullets(bullets)
+        gf.update_bullets(aliens, bullets)
+        # 更新外星人
         gf.update_aliens(aliens, ai_settings)
         # 调入屏幕更新和飞船更新函数，每次重画面
         gf.update_screen(ai_settings, screen, aship, bullets, aliens)
