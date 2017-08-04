@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d968b4b-8590-462c-abe0-052359323e62" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/alien_invasion/geme_stats.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Demo.iml" afterPath="$PROJECT_DIR$/.idea/Demo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alien_invasion/alien.py" afterPath="$PROJECT_DIR$/alien_invasion/alien.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alien_invasion/alien_invasion.py" afterPath="$PROJECT_DIR$/alien_invasion/alien_invasion.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alien_invasion/game_funcitons.py" afterPath="$PROJECT_DIR$/alien_invasion/game_funcitons.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alien_invasion/settings.py" afterPath="$PROJECT_DIR$/alien_invasion/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alien_invasion/ship.py" afterPath="$PROJECT_DIR$/alien_invasion/ship.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +19,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Demo" />
   </component>
@@ -25,12 +27,21 @@
       <file leaf-file-name="game_funcitons.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/alien_invasion/game_funcitons.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+            <state relative-caret-position="77">
+              <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
               <folding>
                 <element signature="e#197#207#0" expanded="true" />
-                <marker date="1501821443207" expanded="true" signature="4111:4730" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geme_stats.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alien_invasion/geme_stats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -38,8 +49,18 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alien_invasion/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bullet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alien_invasion/bullet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -48,8 +69,8 @@
       <file leaf-file-name="alien_invasion.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alien_invasion/alien_invasion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+            <state relative-caret-position="113">
+              <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
               <folding>
                 <element signature="e#193#203#0" expanded="true" />
               </folding>
@@ -57,14 +78,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ship.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alien_invasion/ship.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-211">
+              <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="alien.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alien_invasion/alien.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <marker date="1501816438469" expanded="true" signature="235:864" ph="..." />
-              </folding>
+            <state relative-caret-position="78">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,6 +110,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>create_fleet</find>
+      <find>fire</find>
+      <find>print</find>
+      <find>update_bullets</find>
+      <find>update_aliens</find>
+      <find>center</find>
+      <find>alien</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,22 +132,23 @@
         <option value="$PROJECT_DIR$/unittest/survey/survey.py" />
         <option value="$PROJECT_DIR$/unittest/survey/test_survey.py" />
         <option value="$PROJECT_DIR$/unittest/survey/test_setUp_survey.py" />
-        <option value="$PROJECT_DIR$/alien_invasion/ship.py" />
         <option value="$PROJECT_DIR$/alien_invasion/bullet.py" />
         <option value="$PROJECT_DIR$/alien_invasion/Alien.py" />
         <option value="$PROJECT_DIR$/alien_invasion/test.py" />
-        <option value="$PROJECT_DIR$/alien_invasion/settings.py" />
         <option value="$PROJECT_DIR$/alien_invasion/alien.py" />
+        <option value="$PROJECT_DIR$/alien_invasion/settings.py" />
+        <option value="$PROJECT_DIR$/alien_invasion/ship.py" />
+        <option value="$PROJECT_DIR$/alien_invasion/geme_stats.py" />
         <option value="$PROJECT_DIR$/alien_invasion/alien_invasion.py" />
         <option value="$PROJECT_DIR$/alien_invasion/game_funcitons.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="7" />
-    <option name="width" value="1400" />
-    <option name="height" value="820" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="55" />
+    <option name="y" value="-4" />
+    <option name="width" value="1311" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -148,30 +184,18 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alien_invasion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="alien_invasion" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -259,25 +283,24 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="print" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="alien_invasion" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/alien_invasion" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Demo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/print.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alien_invasion/alien_invasion.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
-    <configuration default="false" name="names" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="names" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -293,63 +316,25 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
-    <configuration default="false" name="test_names" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="print" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittest" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Demo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unittest/test_names.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/print.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
-    <configuration default="false" name="test_survey" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittest/survey" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Demo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unittest/survey/test_survey.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_setUp_survey" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittest/survey" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Demo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unittest/survey/test_setUp_survey.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -365,25 +350,57 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
-    <configuration default="false" name="alien_invasion" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="test_names" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/alien_invasion" />
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittest" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Demo" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alien_invasion/alien_invasion.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unittest/test_names.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+    </configuration>
+    <configuration name="test_setUp_survey" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittest/survey" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Demo" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unittest/survey/test_setUp_survey.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="test_survey" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittest/survey" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Demo" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unittest/survey/test_survey.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.print" />
@@ -418,18 +435,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="7" width="1400" height="820" extended-state="0" />
+    <frame x="55" y="-4" width="1311" height="772" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24855492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26468346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32510886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32436472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39767778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39760837" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -448,16 +465,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alien_invasion/alien.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <marker date="1501816438469" expanded="true" signature="235:864" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alien_invasion/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -489,7 +496,6 @@
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#197#207#0" expanded="true" />
-            <marker date="1501821443207" expanded="true" signature="4111:4730" ph="..." />
           </folding>
         </state>
       </provider>
@@ -532,7 +538,6 @@
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#197#207#0" expanded="true" />
-            <marker date="1501821443207" expanded="true" signature="4111:4730" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,7 +580,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#197#207#0" expanded="true" />
-            <marker date="1501821443207" expanded="true" signature="4111:4730" ph="..." />
           </folding>
         </state>
       </provider>
@@ -618,7 +622,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#197#207#0" expanded="true" />
-            <marker date="1501821443207" expanded="true" signature="4111:4730" ph="..." />
           </folding>
         </state>
       </provider>
@@ -646,7 +649,6 @@
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding>
             <element signature="e#197#207#0" expanded="true" />
-            <marker date="1501821443207" expanded="true" signature="4111:4730" ph="..." />
           </folding>
         </state>
       </provider>
@@ -778,56 +780,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alien_invasion/ship.py">
+    <entry file="file://$PROJECT_DIR$/alien_invasion/alien.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="78">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alien_invasion/bullet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="402">
           <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alien_invasion/alien.py">
+    <entry file="file://$PROJECT_DIR$/alien_invasion/ship.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <marker date="1501816438469" expanded="true" signature="235:864" ph="..." />
-          </folding>
+        <state relative-caret-position="-211">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alien_invasion/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alien_invasion/alien_invasion.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        <state relative-caret-position="113">
+          <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
           <folding>
             <element signature="e#193#203#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/alien_invasion/geme_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/alien_invasion/game_funcitons.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="77">
+          <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
           <folding>
             <element signature="e#197#207#0" expanded="true" />
-            <marker date="1501821443207" expanded="true" signature="4111:4730" ph="..." />
           </folding>
         </state>
       </provider>

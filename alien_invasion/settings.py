@@ -20,7 +20,7 @@ class Settings():
         self.ship_speed_factor = 1.5
         # 设置了子弹的参数
         # 子弹的速度
-        self.bulle_speed_factor = 2
+        self.bulle_speed_factor = 5
         # 子弹的宽度
         self.bullet_width = 3
         # 子弹的高度
@@ -29,9 +29,12 @@ class Settings():
         self.bullet_color = (60, 60, 60)
         self.bullet_allowed = 3
         # 控制外星人速度,外星人的设置
-        self.alien_speed_factor = 1
-
+        self.alien_speed_factor = 8
+        # 外星人下移的速度
         self.fleet_drop_speed = 10
         # fleet_driection为1时表示向右，-1时表示向左
         self.fleet_direction = 1
+        #ship的life的limit
+        self.ship_limit = 3
+
 

@@ -10,6 +10,7 @@ import sys
 import pygame
 import bullet
 import alien
+import time
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
     """相应按下按键"""
     if event.key == pygame.K_RIGHT:
@@ -62,7 +63,7 @@ def update_screen(ai_settings, screen, ship, bullets, aliens):
     # 让最新的界面可见
     pygame.display.flip()
 
-def update_bullets(aliens, bullets):
+def update_bullets(settings, screen, aliens, ship, bullets):
     """更新子弹的位置，并删除无用的子弹"""
     # 更新子弹画面
     bullets.update()
@@ -70,11 +71,17 @@ def update_bullets(aliens, bullets):
     for bullet in bullets.copy():
         if bullet.rect.bottom < 0:
             bullets.remove(bullet)
-        print(len(bullets))
+    check_bullet_alien_collisions(settings, screen, aliens, ship, bullets)
+
+def check_bullet_alien_collisions(settings, screen, aliens, ship, bullets):
+    """相应子弹和外星人的碰撞，当外星人没有了后，删除现有现在并新建外星人"""
     # 检查是否有子弹击中了外星人
     # 如果是这样，就删除相应的子弹和外星人
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
-    print(collisions)
+    if len(aliens) == 0:
+        # 删除现有的子弹并新建一群外星人
+        bullets.empty()
+        create_fleet(settings, screen, aliens, ship)
 
 def fire_bullet(ai_settings, screen, ship, bullets):
     # 根据限制发生子弹，如果没有达到限制就发射一颗子弹
@@ -127,9 +134,14 @@ def create_alien(settings, screen, alien_number, row_number, aliens):
     a_alien.rect.y = a_alien.y
     aliens.add(a_alien)
 
-def update_aliens(aliens):
-    """更新所有外星人的位置"""
+def update_aliens(settings, game_stats, aliens, bullets, screen, ship):
+    """检查是否到达边缘，并更新外星人的位置"""
+    check_fleet_edges(aliens, settings)
     aliens.update()
+    # 检查ship与aliens的碰撞
+    if pygame.sprite.spritecollideany(ship, aliens):
+        ship_hit(settings, game_stats, aliens, bullets, screen, ship)
+    check_aliens_bottom(settings, game_stats, aliens, bullets, screen, ship)
 
 def change_fleet_direction(settings, aliens):
     """将外星人下移，并改变方向"""
@@ -145,8 +157,38 @@ def check_fleet_edges(aliens, settings):
             change_fleet_direction(settings, aliens)
             break   #test__研究break怎么用
 
-def update_aliens(aliens, settings):
-    """检查是否到达边缘，并更新外星人的位置"""
-    check_fleet_edges(aliens, settings)
-    aliens.update()
+def ship_hit(settings, game_stats, aliens, bullets, screen, ship):
+    """响应外星人撞到飞船"""
+    if game_stats.shiplift > 0:
+        # ship的life减去1
+        game_stats.shiplift -= 1
+        # 清空子弹和外星人
+        aliens.empty()
+        bullets.empty()
+        # 创建一群外星人
+        create_fleet(settings, screen, aliens, ship)
+        # 居中飞船
+        ship.center_ship()
+        # 暂停5秒
+        time.sleep(1)
+    else:
+        game_stats.game_active = False
+
+def check_aliens_bottom(settings, game_stats, aliens, bullets, screen, ship):
+    """检查外星人是否到达低端"""
+    # 屏幕的尺寸
+    screen_rect = screen.get_rect()
+    # 对外星人进行循环
+    for alien in aliens.sprites():
+        # 如果外星人到达低端
+        if alien.rect.bottom >= screen_rect.bottom:
+            #向飞船撞到一样处理
+            ship_hit(settings, game_stats, aliens, bullets, screen, ship)
+            break
+
+
+
+
+
+
 
