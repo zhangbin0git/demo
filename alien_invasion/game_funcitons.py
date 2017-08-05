@@ -67,10 +67,11 @@ def check_play_button(game_stats, play_button, mouse_x, mouse_y, aliens,
         game_stats.reset_stats()
         # 设定为激活状态
         game_stats.game_active = True
-        # 重置记分牌
+        # 重置记分牌,重置飞机的数量
         score_board.prep_score()
         score_board.prep_level()
         score_board.prep_high_score()
+        score_board.prep_ships()
         # 清空子弹和外星人
         aliens.empty()
         bullets.empty()
@@ -195,14 +196,17 @@ def create_alien(settings, screen, alien_number, row_number, aliens):
     a_alien.rect.y = a_alien.y
     aliens.add(a_alien)
 
-def update_aliens(settings, game_stats, aliens, bullets, screen, ship):
+def update_aliens(settings, game_stats, aliens, bullets, screen,
+                  ship, score_board):
     """检查是否到达边缘，并更新外星人的位置"""
     check_fleet_edges(aliens, settings)
     aliens.update()
     # 检查ship与aliens的碰撞
     if pygame.sprite.spritecollideany(ship, aliens):
-        ship_hit(settings, game_stats, aliens, bullets, screen, ship)
-    check_aliens_bottom(settings, game_stats, aliens, bullets, screen, ship)
+        ship_hit(settings, game_stats, aliens, bullets, screen,
+                 ship, score_board)
+    check_aliens_bottom(settings, game_stats, aliens, bullets, screen,
+                        ship, score_board)
 
 def change_fleet_direction(settings, aliens):
     """将外星人下移，并改变方向"""
@@ -218,11 +222,13 @@ def check_fleet_edges(aliens, settings):
             change_fleet_direction(settings, aliens)
             break   #test__研究break怎么用
 
-def ship_hit(settings, game_stats, aliens, bullets, screen, ship):
+def ship_hit(settings, game_stats, aliens, bullets, screen, ship, score_board):
     """响应外星人撞到飞船"""
     if game_stats.shiplift > 0:
         # ship的life减去1
         game_stats.shiplift -= 1
+        # 更新飞机的数量
+        score_board.prep_ships()
         # 清空子弹和外星人
         aliens.empty()
         bullets.empty()
@@ -238,7 +244,8 @@ def ship_hit(settings, game_stats, aliens, bullets, screen, ship):
         #显示光标
         pygame.mouse.set_visible(True)
 
-def check_aliens_bottom(settings, game_stats, aliens, bullets, screen, ship):
+def check_aliens_bottom(settings, game_stats, aliens, bullets, screen,
+                        ship, score_board):
     """检查外星人是否到达低端"""
     # 屏幕的尺寸
     screen_rect = screen.get_rect()
@@ -247,7 +254,8 @@ def check_aliens_bottom(settings, game_stats, aliens, bullets, screen, ship):
         # 如果外星人到达低端
         if alien.rect.bottom >= screen_rect.bottom:
             #向飞船撞到一样处理
-            ship_hit(settings, game_stats, aliens, bullets, screen, ship)
+            ship_hit(settings, game_stats, aliens, bullets, screen,
+                     ship, score_board)
             break
 
 def check_high_score(game_stats, scoreboard):

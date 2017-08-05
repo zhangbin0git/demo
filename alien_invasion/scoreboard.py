@@ -6,7 +6,8 @@
 # @File    : scoreboard.py
 # @Software: PyCharm Community Edition
 # 记录分数的类
-import pygame.font
+import ship
+import pygame
 class Scoreboard():
     """显示得分信息的类"""
     def __init__(self, screen, settings, game_stats):
@@ -22,6 +23,7 @@ class Scoreboard():
         self.prep_score()
         self.prep_high_score()
         self.prep_level()
+        self.prep_ships()
 
 
     def prep_score(self):
@@ -63,9 +65,18 @@ class Scoreboard():
         self.level_image_rect.right = self.score_rect.right
         self.level_image_rect.top = self.score_rect.bottom + 10
 
+    def prep_ships(self):
+        """显示剩余的船的数量"""
+        self.ships = pygame.sprite.Group()
+        for ship_number in range(self.game_stats.shiplift):
+            aship = ship.Ship(self.settings, self.screen)
+            aship.rect.x = 10 + ship_number * aship.rect.width
+            aship.rect.y = 10
+            self.ships.add(aship)
+
     def show_score(self):
         """显示得分"""
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_image_rect)
         self.screen.blit(self.level_image, self.level_image_rect)
-
+        self.ships.draw(self.screen)

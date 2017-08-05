@@ -54,7 +54,7 @@ def run_game():
                               game_stats, sb)
             # 更新外星人
             gf.update_aliens(ai_settings, game_stats, aliens, bullets,
-                             screen, aship)
+                             screen, aship, sb)
         # 调入屏幕更新和飞船更新函数，每次重画面
         gf.update_screen(ai_settings, screen, aship, bullets, aliens,
                          game_stats, play_button, sb)

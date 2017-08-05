@@ -8,11 +8,13 @@
 # 游戏中的元素角色类
 # 飞船类
 import pygame
-class Ship():
+class Ship(pygame.sprite.Sprite):
     """飞船类"""
 
     def __init__(self, settings, screen):
         """初始化飞船的各个参数"""
+        # 初始化父类
+        super().__init__()
         # 屏幕参数
         self.screen = screen
         # 整体设置
