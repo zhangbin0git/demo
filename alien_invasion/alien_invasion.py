@@ -16,6 +16,7 @@ import ship
 import game_funcitons as gf
 import alien
 import geme_stats
+import button
 def run_game():
     # 初始化游戏并创建一个屏幕对象
     # 实例化类
@@ -34,10 +35,13 @@ def run_game():
     gf.create_fleet(ai_settings, screen, aliens, aship)
     # 创建一个用于统计游戏信息的实例
     game_stats = geme_stats.GameStats(ai_settings)
+    #绘制play按钮
+    play_button = button.Button(screen, "Play")
     # 开始游戏的主循环
     while True:
         # 监视键盘和鼠标的实践
-        gf.check_events(ai_settings, screen, aship, bullets)
+        gf.check_events(ai_settings, screen, aship, bullets, game_stats,
+                        play_button, aliens)
         if game_stats.game_active:
             # 检查键盘输入，调整飞船的位置,此条代码是更新ship的位置数据
             aship.update()
@@ -47,6 +51,7 @@ def run_game():
             gf.update_aliens(ai_settings, game_stats, aliens, bullets,
                              screen, aship)
         # 调入屏幕更新和飞船更新函数，每次重画面
-        gf.update_screen(ai_settings, screen, aship, bullets, aliens)
+        gf.update_screen(ai_settings, screen, aship, bullets, aliens,
+                         game_stats, play_button)
 
 run_game()

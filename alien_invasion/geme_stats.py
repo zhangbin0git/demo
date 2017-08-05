@@ -10,7 +10,8 @@ class GameStats():
     """跟踪游戏的统计信息"""
     def __init__(self, settings):
         """初始化统计信息"""
-        self.game_active = True
+        # 让游戏处于非活动状态
+        self.game_active = False
         self.settings = settings
         self.reset_stats()
 

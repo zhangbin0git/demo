@@ -35,7 +35,9 @@ def check_keyup_events(event, ship):
     elif event.key == pygame.K_LEFT:
         # 持续向左移动False
         ship.moving_left = False
-def check_events(ai_settings, screen, ship, bullets):
+
+def check_events(ai_settings, screen, ship, bullets, game_stats,
+                 play_button, aliens):
     """相应按键和鼠标事件,检查相应的事件"""
     for event in pygame.event.get():
         # 检查鼠标时间
@@ -48,11 +50,39 @@ def check_events(ai_settings, screen, ship, bullets):
         elif event.type == pygame.KEYUP:
             # 检查松开，调用松开的函数check_keyup_events
             check_keyup_events(event, ship)
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            mouse_x, mouse_y = pygame.mouse.get_pos()
+            check_play_button(game_stats, play_button, mouse_x, mouse_y,
+                              aliens, bullets, ai_settings, screen, ship)
 
-def update_screen(ai_settings, screen, ship, bullets, aliens):
+def check_play_button(game_stats, play_button, mouse_x, mouse_y, aliens,
+                      bullets, settings, screen, ship):
+    """在玩家play时，开始游戏"""
+    button_clicked = play_button.rect.collidepoint(mouse_x, mouse_y)
+    if button_clicked and not game_stats.game_active:
+        # 隐藏光标
+        pygame.mouse.set_visible(False)
+        # 重置life
+        game_stats.reset_stats()
+        # 设定为激活状态
+        game_stats.game_active = True
+        # 清空子弹和外星人
+        aliens.empty()
+        bullets.empty()
+        #创建一群新的外星人
+        create_fleet(settings, screen, aliens, ship)
+        ship.center_ship()
+
+
+def update_screen(ai_settings, screen, ship, bullets, aliens,
+                  game_stats, play_button):
     """更新屏幕，飞船，外星人的画面，并切换到最新屏幕"""
     # 每次循环重绘制屏幕,指定了屏幕的颜色
     screen.fill(ai_settings.bg_color)
+    #如果游戏处于非活动状态，就显示Play button
+    if not game_stats.game_active:
+        #绘制botton
+        play_button.draw_button()
     # 每次循环指定位置绘制船的图像
     ship.blitme()
     # 绘制外星人
@@ -172,7 +202,10 @@ def ship_hit(settings, game_stats, aliens, bullets, screen, ship):
         # 暂停5秒
         time.sleep(1)
     else:
+        # 将游戏处于非激活状态
         game_stats.game_active = False
+        #显示光标
+        pygame.mouse.set_visible(True)
 
 def check_aliens_bottom(settings, game_stats, aliens, bullets, screen, ship):
     """检查外星人是否到达低端"""
