@@ -13,7 +13,7 @@ y_values = [x**2 for x in x_values]
 # x_values = [100]
 # y_values = [100 ** 3]
 # 绘制散点,其中的S是散点的大小,edgecolor表示边框线，c表示颜色，cmap表示渐变颜色
-plt.scatter(x_values, y_values, s=100, edgecolor='none', c=y_values,
+plt.scatter(x_values, y_values, s=100, edgecolor='none', c=x_values,
             cmap=plt.cm.Blues)
 # 设置图标标题并给坐标轴加上标签
 # 设置图标标题
